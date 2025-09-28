@@ -1,0 +1,166 @@
+.flora-share-h1 {
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.flora-share-h1:focus,
+.flora-share-h1:hover {
+  background: rgba(255, 255, 255, 0.13);
+  outline: 2px solid #fff;
+}
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+/* Fondo degradé para la barra de navegación */
+.flora-nav-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100px;
+  z-index: 5;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+/* Mini reproductor Spotify */
+.flora-player {
+  width: 320px;
+  max-width: 90vw;
+  margin: 1.2em auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Barra de navegación superior */
+.flora-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  gap: 0.1em;
+  padding: 2em 0 0.7em 0;
+  z-index: 10;
+  background: transparent;
+}
+
+.flora-btn {
+  color: #fff;
+  background: transparent;
+  padding: 1.3em;
+  /* font-size: 1.1em; */
+  font-family: inherit;
+  font-weight: 400;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  /* gap: 0.5em; */
+}
+.flora-icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.3em;
+  width: 32px;
+  height: 32px;
+}
+.flora-btn:hover,
+.flora-btn:focus {
+  background: rgba(255, 255, 255, 0.13);
+  color: #fff;
+  border-color: #fff;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+div {
+  margin: unset;
+  padding: unset;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Oswald", system-ui, -apple-system, Roboto, Oxygen, Ubuntu,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Fondo responsive con imágenes JPG */
+.flora-main {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+
+.flora-main::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  z-index: 0;
+  background-image: url("../img/flora-peor-buenos-aires-4k.jpg");
+}
+
+@media (max-width: 1200px) {
+  .flora-main::before {
+    background-image: url("../img/flora-peor-buenos-aires-fhd.jpg");
+  }
+}
+@media (max-width: 700px) {
+  .flora-main::before {
+    background-image: url("../img/flora-peor-buenos-aires-portrait.jpg");
+  }
+}
+
+.flora-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.flora-title {
+  font-size: clamp(2.5rem, 8vw, 7rem);
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  /* margin-bottom: 0.5em; */
+}
+
+.flora-main p {
+  color: #fff;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 200;
+}
